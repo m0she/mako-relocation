@@ -1,6 +1,5 @@
 <%def name="relocate(dest)">
     <%
-        print context, caller, dest
         from relocation import branch
 
         with branch(context, dest):

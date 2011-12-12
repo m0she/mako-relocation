@@ -31,7 +31,6 @@ class mudeque(object):
 
     def branch(self, new_deque=None):
         orig_tail = copy(self)
-        print "branch: ", self, orig_tail
         if new_deque is None:
             new_deque = self.cls()
         self.deques.append(new_deque)
@@ -48,7 +47,6 @@ class mudeque(object):
     del name, dest
 
     def __iter__(self):
-        print "Iterating on", self
         return chain(*self.deques)
 
     def __repr__(self):
