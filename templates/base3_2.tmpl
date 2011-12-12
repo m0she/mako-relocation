@@ -1,0 +1,14 @@
+<%namespace name="relocation" file="relocation.tmpl"/>
+base3_2 header:
+<%block name="mainhead">
+    base3_2 default head DESTINATION:
+    <%relocation:destination dest="js"/>
+    <%block name="myhead"></%block>
+</%block>
+base3_2 body:
+<%block name="mainbody">
+    <%block name="mybody"></%block>
+</%block>
+base3_2 end. Non block body {
+${self.body()}
+}

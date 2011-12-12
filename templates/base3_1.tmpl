@@ -1,0 +1,16 @@
+<%inherit file="base3_2.tmpl"/>
+<%block name="myhead">
+    <%block name="meta">
+        META default from base3_1 
+    </%block>
+    HEAD data from base3_1
+</%block>
+<%block name="mybody">
+    BODY data from base3_1
+    <%block name="pagebody">
+    </%block>
+    <%include file="base3_1_inc.tmpl"/>
+</%block>
+base3_1 non block body {
+${self.body()}
+}

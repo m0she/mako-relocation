@@ -1,0 +1,19 @@
+--- old/util.py	2011-12-12 19:11:18.000000000 +0200
++++ new/util.py	2011-12-12 19:14:29.000000000 +0200
+@@ -123,11 +123,12 @@
+             self.delim = ''
+         self.unicode = unicode
+         self.errors = errors
+-        self.write = self.data.append
++
++    def write(self, *args, **kwargs):
++        return self.data.append(*args, **kwargs)
+  
+     def truncate(self):
+-        self.data = collections.deque()
+-        self.write = self.data.append
++        self.data.clear()
+  
+     def getvalue(self):
+         if self.encoding:
+

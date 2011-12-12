@@ -1,0 +1,13 @@
+<%inherit file="base3_1.tmpl"/>
+<%block name="meta">
+    META from t3 
+</%block>
+t3 no block
+<%block name="pagebody">
+    <%include file="t3_inc.tmpl"/>
+    PAGEBODY from t3 
+</%block>
+<%namespace name="relocation" file="relocation.tmpl"/>
+<%relocation:relocate dest="js">
+t3 relocated js
+</%relocation:relocate>

@@ -1,0 +1,16 @@
+<%def name="relocate(dest)">
+    <%
+        print context, caller, dest
+        from relocation import branch
+
+        with branch(context, dest):
+            context.writer()(caller.body())
+
+        return
+    %>
+</%def>
+
+<%def name="destination(dest)">
+    <% from relocation import destination as do_destination %>
+    ${do_destination(context, dest)}
+</%def>
